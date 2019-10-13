@@ -1,4 +1,5 @@
-scriptdir=$(dirname "$0")
+scriptdir=$(dirname $(realpath -s $0))
+echo $scriptdir
 while getopts 'o:s:d:' c; do
 	case $c in
 		o) optional=$OPTARG ;;
@@ -19,7 +20,7 @@ tail -n+2 $sampfile | while read line; do
 	
 	echo $command
 	
-	$command
+	#$command
 
 	tail -n +5 STAR_output/${sample}ReadsPerGene.out.tab > gene_counts/${sample}.count
 
