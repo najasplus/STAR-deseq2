@@ -2,14 +2,14 @@
 
 ## Input 
 Your working directory should contain:
-* Paired end reads named <SampleName>.1.fastq.gz <SampleName>.2.fastq.gz
+* Paired end reads named SampleName.1.fastq.gz SampleName.2.fastq.gz
 * sample_description.txt - tab delimited file with at least two columns: sample and condition (primary condition according to which the differential gene expression analysis will be run. See the exemplary sample_description.txt file and follow DESeq2 guidelines for producing sample description file.
 
 sample	condition
-<SampleName1>	condition1
-<SampleName2>	condition1
-<SampleName3>	condition2
-<SampleName4>	condition2
+SampleName1	condition1
+SampleName2	condition1
+SampleName3	condition2
+SampleName4	condition2
 
 The basic executed command is 
 
@@ -48,7 +48,7 @@ qsub -cwd star_mapping_cluster.sh
 
 ## Count normalization and differential expression analysis
 
-Depending on the type of sequencing library you should choose one of the raw_counts matrices produced during the previous step. You pass sample description and count_matrix to the R script as positional arguments (order matters!)
+Depending on the type of sequencing library you should choose one of the raw_counts matrices produced during the previous step. You pass sample description and count_matrix to the R script as positional arguments (order matters!). The normalized counts as well as pairwise condition differential expression analysis and visualizations will be outputted to the whole_matrix_output subdirectory of your working directory
 
 ``` bash
 Rscript deseq2_analysis.R sample_description.txt count_matrix.tsv
