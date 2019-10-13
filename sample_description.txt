@@ -1,0 +1,5 @@
+sample	Sample_name	condition	fish_pool
+S933Nr1	1D	dorsal	1
+S933Nr2	1F	flank	1
+S933Nr4	2D	dorsal	2
+S933Nr5	2F	flank	2
