@@ -1,4 +1,5 @@
-scriptdir=$(dirname "$0")
+scriptdir=$(dirname $(realpath -s $0))
+echo $scriptdir
 while getopts 'o:s:d:' c; do
 	case $c in
 		o) optional=$OPTARG ;;
