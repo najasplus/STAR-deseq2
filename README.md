@@ -48,7 +48,7 @@ qsub -cwd star_mapping_cluster.sh
 
 ## Count normalization and differential expression analysis
 
-Depending on the type of sequencing library you should choose one of the raw_counts matrices produced during the previous step. You pass sample description and count_matrix to the R script as positional arguments (order matters!)
+Depending on the type of sequencing library you should choose one of the raw_counts matrices produced during the previous step. You pass sample description and count_matrix to the R script as positional arguments (order matters!). The normalized counts as well as pairwise condition differential expression analysis and visualizations will be outputted to the whole_matrix_output subdirectory of your working directory
 
 ``` bash
 Rscript deseq2_analysis.R sample_description.txt count_matrix.tsv
