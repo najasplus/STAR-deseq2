@@ -19,6 +19,9 @@ samples <- read.table(arguments[1], sep = "\t", h = T)
 
 countdf = read.table(arguments[2], sep = "\t", h = T, stringsAsFactors = F)
 
+#set working directory to the directory of count matrix
+setwd(dirname(arguments[2]))
+
 #annotation for GRCz11
 
 ann <- read.table("/ebio/ecnv_projects/common_resourses/data/reference_genome/GRCz11/gene_names_locations_mart_export_nozfin.txt", 
