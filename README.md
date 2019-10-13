@@ -2,14 +2,14 @@
 
 ## Input 
 Your working directory should contain:
-* Paired end reads named SampleName.1.fastq.gz SampleName.2.fastq.gz
+* Paired end reads named SampleName1.1.fastq.gz SampleName1.2.fastq.gz
 * sample_description.txt - tab delimited file with at least two columns: sample and condition (primary condition according to which the differential gene expression analysis will be run. See the exemplary sample_description.txt file and follow DESeq2 guidelines for producing sample description file.
 
-sample	condition
-SampleName1	condition1
-SampleName2	condition1
-SampleName3	condition2
-SampleName4	condition2
+sample	condition<br/>
+SampleName1	condition1<br/>
+SampleName2	condition1<br/>
+SampleName3	condition2<br/>
+SampleName4	condition2<br/>
 
 The basic executed command is 
 
