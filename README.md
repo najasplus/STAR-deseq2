@@ -38,9 +38,9 @@ The consolidated count matrices will be saved in working directory. Depending on
 ### Analyze on cluster
 You can run STAR mapping on compute cluster. For this
 
-*The script star_mapping_cluster.sh and star_mapping.sh should be located in the same directory
-*Modify star_mapping_cluster.sh by passing -s -d and (optionally) -o parameters to star_mapping.sh
-*Submit your script to the cluster from your current working directory
+* The script star_mapping_cluster.sh and star_mapping.sh should be located in the same directory
+* Modify star_mapping_cluster.sh by passing -s -d and (optionally) -o parameters to star_mapping.sh
+* Submit your script to the cluster from your current working directory
 
 ``` bash
 qsub -cwd star_mapping_cluster.sh
