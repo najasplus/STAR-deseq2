@@ -49,7 +49,7 @@ dds <- DESeq(dds_counts)
 dir.create("whole-matrix-output")
 
 #save normalized counts for all samples with annotations
-counts_df <- as.data.frame(counts(dds, normalized=TRUE))
+counts_df <- as.data.frame(counts(dds, normalized=TRUE), stringsAsFactors = F)
 print("counts_df")
 print(head(counts_df))
 norm_counts <- cbind(GeneID = row.names(counts_df), counts_df, stringsAsFactors = F)
