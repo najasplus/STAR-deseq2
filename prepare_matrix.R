@@ -1,11 +1,20 @@
+#merge individual count files into one matrix keeping sample order from sample files
+#as required by downstream processing by DESeq2
 
-#merge individual count files into one matrix
+arguments = commandArgs(trailingOnly = T)
+setwd(arguments[1])
+samples = read.table(arguments[2], sep = "\t", h = T, stringsAsFactors = F)
 
-#find all matrices 
-all_files <- list.files(path = "gene_counts", pattern = ".count")
+
+#find all matrices in the order they are provided by sample file 
+all_files = c()
+
+for (samp in samples$sample) {
+  all_files = c(all_files, paste0(samp, ".count"))
+}
+
 file1 <- read.table(paste0("gene_counts/", all_files[1]), sep = "\t", h = F)
 gnames <- data.frame(matrix(nrow = nrow(file1), ncol = 0), stringsAsFactors = F)
-
 
 #check if all count files have the same length and same gene order
 for (f in all_files){

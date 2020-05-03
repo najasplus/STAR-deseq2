@@ -26,4 +26,4 @@ tail -n+2 $sampfile | while read line; do
 
 done
 
-Rscript $scriptdir/prepare_matrix.R -e "setwd('$workdir')"
+Rscript $scriptdir/prepare_matrix.R $workdir $sampfile
